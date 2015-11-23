@@ -44,7 +44,8 @@ So given the above my current ideas/options are :
   - Angular app with Yoeman generator [X]
   - AngularJS [X]
   - Angular ui-router
-  - bootstrap [X]
+  - ~~bootstrap [X]~~
+    - Using angular material instead 
   - SASS & bootstrap sass [X]
   - bootstrap with material (https://fezvrasta.github.io/bootstrap-material-design/#about)
   - Setup git repo
