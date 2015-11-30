@@ -16,9 +16,19 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ngMaterial'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $mdThemingProvider) {
+
+    // Set the theme of Angular Material with the primary and accent colors
+    $mdThemingProvider.theme('default')
+    // Setting the default hue to ve used in primary color pallete
+    .primaryPalette('grey', {
+      'default' : '900'
+    })
+    .accentPalette('green');
+
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',

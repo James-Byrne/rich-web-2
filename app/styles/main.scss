@@ -3,6 +3,22 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+// Variables
+
+$toolbar-color: #222222;
+$light-text-color: white;
+// end variables
+
+.md-menu-toolbar {
+  width: 100%;
+}
+
+.md-menu-toolbar > h1 {
+  padding-left: 15px;
+  // float: left;
+}
+
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -13,6 +29,19 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 body {
   padding: 0;
 }
+
+
+
+
+
+
+
+
+
+
+// Everything below this line needs to be reviewd and deleted
+
+
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
