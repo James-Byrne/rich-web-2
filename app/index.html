@@ -8,6 +8,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -20,15 +21,12 @@
     <![endif]-->
 
     <header>
-      <md-toolbar class="md-primary" layout="row">
-        <div class="md-menu-toolbar">
-          <h1>
-            RW2
-          </h1>
-          <ul>
-            <li>About</li>
-            <li>some text</li>
-          </ul>
+      <md-toolbar class="md-primary" layout="row" layout-fill>
+        <div class="md-toolbar-tools">
+          <h1>RW2</h1>
+          <span flex></span>
+          <h4>About</h4>
+          <h4>Contact</h4>
         </div>
       </md-toolbar>
     </header>
