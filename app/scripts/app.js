@@ -27,7 +27,9 @@ angular
     .primaryPalette('grey', {
       'default' : '900'
     })
-    .accentPalette('green');
+    .accentPalette('green', {
+      'default' : '600'
+    });
 
     $routeProvider
       .when('/', {

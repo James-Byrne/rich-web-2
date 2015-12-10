@@ -8,10 +8,15 @@
  * Controller of the richWeb2App
  */
 angular.module('richWeb2App')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+
+
+
+.controller('MainCtrl', function ($scope) {
+
+  // Set the background image
+  $scope.style = {
+    "background-image" : "url(../images/main-photo.jpg)",
+    "min-height" : "100%"
+  };
+
+});
