@@ -1,25 +1,12 @@
 // $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
-@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-// Variables
+@import "toolbar.scss";
+@import "components.scss";
 
-$toolbar-color: #222222;
-$light-text-color: white;
-// end variables
-
-.md-menu-toolbar {
-  width: 100%;
-}
-
-.md-toolbar-tools > h1 {
-  padding-left: 15px;
-  font-size: 36px;
-}
-
-.md-toolbar-tools > h4 {
-  padding-right: 15px;
+body {
+  padding: 0;
 }
 
 .browsehappy {
@@ -29,9 +16,6 @@ $light-text-color: white;
   padding: 0.2em 0;
 }
 
-body {
-  padding: 0;
-}
 
 
 

@@ -1,0 +1,28 @@
+// file containing all of the custom components that are small enough not to warrent their own file 
+
+
+.container {
+  height: auto;
+}
+
+.button {
+  background-color: #43A047;
+  color: #F3F3F3;
+}
+
+.button-lg {
+  @extend .button;
+  width: 33%;
+}
+
+.text-over-image {
+  color: white;
+  text-align: center;
+}
+
+.center-paragraph {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+}
