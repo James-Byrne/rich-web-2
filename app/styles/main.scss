@@ -1,5 +1,6 @@
 // $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
+
 // endbower
 
 @import "toolbar.scss";
@@ -8,6 +9,12 @@
 body {
   padding: 0;
   height: 100%;
+  width: 100%;
+}
+
+a {
+  color: #F3F3F3;
+  text-decoration: none;
 }
 
 .browsehappy {
