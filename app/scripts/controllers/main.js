@@ -9,14 +9,12 @@
  */
 angular.module('richWeb2App')
 
+  .controller('MainCtrl', function ($scope) {
 
+    // Set the background image
+    $scope.style = {
+      "background-image" : "url(../images/main-photo.jpg)",
+      "min-height" : "100%"
+    };
 
-.controller('MainCtrl', function ($scope) {
-
-  // Set the background image
-  $scope.style = {
-    "background-image" : "url(../images/main-photo.jpg)",
-    "min-height" : "100%"
-  };
-
-});
+  });

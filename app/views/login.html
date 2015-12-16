@@ -1,22 +1,15 @@
-<md-content ng-controller="MainCtrl" ng-style="style" class="md-padding container" layout="column" layout-wrap layout-align="start center">
+<md-content ng-controller="LoginCtrl"  ng-style="style" layout="row" layout-align="center start" ng-cloak>
 
-
-  <div layout-align="center start">
-    Hello World!  
+  <div flex="33" flex-sm="80" class="form-container md-raised" layout-align="center center" >
+    <md-input-container class="md-accent">
+      <label>Email</label>
+      <input type="email" ng-model="user.email">
+    </md-input-container>
+    <md-input-container class="md-accent">
+      <label>Password</label>
+      <input type="password" ng-model="user.password">
+    </md-input-container>
+    <md-button layout-fill ng-click="login()" class="md-raised md-accent">Login</md-button>
   </div>
-
-
-
-
-
-
-
-  <!-- <div layout-align="center center" class="center-paragraph">
-    <h1 class="md-headline text-over-image">Chat with people all over the world, we have channels of all types so your bound to find something that interestes you</h1>
-  </div>
-  <div layout="row" layout-sm="column" layout-align="center start" layout-align-sm="start center" >
-    <md-button class="md-raised md-accent">Login</md-button>
-    <md-button class="md-raised md-accent">Register</md-button>
-  </div> -->
 
 </md-content>

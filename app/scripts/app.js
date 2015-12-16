@@ -17,7 +17,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ngMaterial'
+    'ngMaterial',
+    'firebase'
   ])
   .config(function ($routeProvider, $mdThemingProvider) {
 
@@ -42,12 +43,28 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
-      .when ('/login', {
+      .when('/login', {
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl',
         controllerAs: 'login'
       })
+      .when('/register', {
+        templateUrl: 'views/register.html',
+        controller: 'RegisterCtrl',
+        controllerAs: 'register'
+      })
+      .when('/channels', {
+        templateUrl: 'views/channels.html',
+        controller: 'ChannelsCtrl',
+        controllerAs: 'channels'
+      })
+      .when('/channel', {
+        templateUrl: 'views/channel.html',
+        controller: 'ChannelCtrl',
+        controllerAs: 'channel'
+      })
       .otherwise({
+        // Redirect to the 404 page
         redirectTo: '/'
       });
   });
