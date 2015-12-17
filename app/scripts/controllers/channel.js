@@ -13,7 +13,7 @@
 
 angular.module('richWeb2App')
 
-  .controller('ChannelCtrl', function ($scope, $location, channelName, $firebaseArray) {
+  .controller('ChannelCtrl', function ($scope, $location, channelName, $firebaseArray, userAuth) {
     // Set the background color
     $scope.style = {
       "background-color" : "#F3F3F3",
@@ -32,9 +32,16 @@ angular.module('richWeb2App')
       // Get the messages from selected channel
       $scope.messages = $firebaseArray(ref);
 
+      if(userAuth.isLoggedIn()){
+        $scope.userName = userAuth.getEmail;
+      } else {
+        $scope.userName = "anon";
+      }
+
       // Send a message from the user to the channel
       $scope.sendMessage = function () {
         $scope.messages.$add({
+          name: $scope.userName,
           text: $scope.newMessage
         });
         console.log($scope.newMessage);

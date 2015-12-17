@@ -30,8 +30,8 @@ angular.module('richWeb2App')
         if (error) {
           console.log("Error creating user:", error);
         } else {
-          console.log("Successfully created user account with uid:", userData.uid);
           $location.path("/login");
+          console.log("Successfully created user account with uid:", userData.uid);
         }
       });
     };

@@ -16,9 +16,12 @@ angular.module('richWeb2App')
       "min-height": "100vh",
     };
 
+    // Move the user to the selected channel
+    // Set the channel name for reuse by the channel controller
     $scope.selectChannel = function(dest) {
       channelName.setChannel(dest);
       console.log(dest);
       $location.path("/channel");
     };
+
   });

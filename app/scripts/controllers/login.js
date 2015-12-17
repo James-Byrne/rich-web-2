@@ -13,7 +13,7 @@
 
 angular.module('richWeb2App')
 
-  .controller('LoginCtrl', function ($scope, $location) {
+  .controller('LoginCtrl', function ($scope, $location, userAuth) {
     // Set the background color
     $scope.style = {
       "background-color" : "#43A047",
@@ -30,8 +30,10 @@ angular.module('richWeb2App')
         if (error) {
           console.log("Login Failed!", error);
         } else {
-          console.log("Authenticated successfully with payload:", authData);
+          userAuth.setEmail($scope.user.email);
           $location.path("/channels");
+          console.log("Authenticated successfully with payload:", authData);
+
         }
       });
     };

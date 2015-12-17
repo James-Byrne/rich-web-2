@@ -3,7 +3,10 @@
   <md-card flex="80" class="top-margin">
     <md-list flex="80">
       <md-list-item ng-repeat="message in messages">
-        {{message.text}}
+        <div class="md-list-item-text">
+          <h3>{{message.name}}</h3>
+          <p>{{message.text}}</p>
+        </div>
       </md-list-item>
     </md-list>
     <md-divider></md-divider>
