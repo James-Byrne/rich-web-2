@@ -22,6 +22,7 @@ angular.module('richWeb2App')
 
     // Get the channel the user selected
     var channel = channelName.getChannel();
+    
     // Check if channel is empty, if it is return them to the channels page
     if (!channel) {
       $location.path("/channels");
@@ -31,17 +32,14 @@ angular.module('richWeb2App')
       var ref = new Firebase("https://richweb2.firebaseio.com" + channel);
       // Get the messages from selected channel
       $scope.messages = $firebaseArray(ref);
+      // get the users email
+      var userName = userAuth.getEmail();
 
-      if(userAuth.isLoggedIn()){
-        $scope.userName = userAuth.getEmail;
-      } else {
-        $scope.userName = "anon";
-      }
 
       // Send a message from the user to the channel
       $scope.sendMessage = function () {
         $scope.messages.$add({
-          name: $scope.userName,
+          name: userName,
           text: $scope.newMessage
         });
         console.log($scope.newMessage);

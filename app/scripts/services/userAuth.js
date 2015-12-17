@@ -5,30 +5,20 @@
  * @description
  * #userAuth
  * Service of the richWeb2App
- * Service for checking the users login status
+ * Service for getting the users email once they are
+ * logged in or get default email
  */
-
- // global defined for jsHint
- /*global Firebase */
 
 angular.module('richWeb2App')
 
   .service('userAuth', function() {
-    var ref = new Firebase("https://richweb2.firebaseio.com");
-    var userEmail = "";
+    // Default to anon
+    var userEmail = "anon";
 
+    // Track the users email(name) throughout the site
+    // getEmail() returns the users email or default
+    // setEmail() changes the value of users email
     return {
-      isLoggedIn: function() {
-        ref.onAuth(function(authData) {
-          if (authData) {
-            console.log("Authenticated with uid:", authData.uid);
-            return true;
-          } else {
-            console.log("Client unauthenticated.");
-            return false;
-          }
-        });
-      },
       getEmail: function() {
         return userEmail;
       },
@@ -36,5 +26,4 @@ angular.module('richWeb2App')
         userEmail = value;
       }
     };
-
   });

@@ -31,9 +31,8 @@ angular.module('richWeb2App')
           console.log("Login Failed!", error);
         } else {
           userAuth.setEmail($scope.user.email);
-          $location.path("/channels");
           console.log("Authenticated successfully with payload:", authData);
-
+          $location.path("/channels");
         }
       });
     };

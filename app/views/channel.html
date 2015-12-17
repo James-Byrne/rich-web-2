@@ -1,27 +1,28 @@
-<md-content ng-controller="ChannelCtrl"  ng-style="style" layout="row" layout-align="center start" ng-cloak>
+<md-content layout-align="center start" layout="row" ng-cloak ng-controller="ChannelCtrl" ng-style="style">
 
-  <md-card flex="80" class="top-margin">
-    <md-list flex="80">
-      <md-list-item ng-repeat="message in messages">
+  <md-card class="top-margin" flex="80">
+    <md-list>
+      <md-list-item class="md-2-line" flex ng-repeat="message in messages">
+        <img alt="" class="md-avatar" src="../../images/profile-icon.png"/>
         <div class="md-list-item-text">
           <h3>{{message.name}}</h3>
-          <p>{{message.text}}</p>
+          <md-divider></md-divider>
+          <h4>{{message.text}}</h4>
         </div>
       </md-list-item>
     </md-list>
-    <md-divider></md-divider>
+
     <!-- Input for the chat channel -->
     <form ng-submit="addMessage()">
-      <div class="channel-input">
-        <md-input-container flex="80" class="md-accent">
+      <div class="channel-input md-accent" layout-align="start end" layout="row" layout-sm="column" layout-align-sm="center start stretch">
+        <md-input-container flex-sm="100" class="md-accent" flex style="padding: 5px;">
           <label>send a message</label>
-          <input type="text" ng-model="newMessage"/>
+          <input ng-model="newMessage" type="text"/>
         </md-input-container>
 
-        <md-button ng-click="sendMessage(newMessage)" flex="20" class="md-raised md-accent">Send</md-button>
+        <md-button class="md-raised md-accent" flex-sm="100" flex="20" ng-click="sendMessage(newMessage)">Send</md-button>
       </div>
     </form>
-
 
   </md-card>
 

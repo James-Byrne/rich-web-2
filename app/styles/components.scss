@@ -28,6 +28,21 @@
 .channel-image {
   background-color: #43A047;
 }
+@media screen and (max-width:600px) and (min-width:455px) {
+
+  .channel-image {
+    background-color: #43A047;
+  }
+  .channel-image img {
+    max-width: 432px;
+    min-width: 432px
+  }
+}
 .channel-input {
   padding: 0;
+}
+.profile-pic {
+  border-radius: 75px;
+  max-width: 45px;
+  max-height: 45px;
 }

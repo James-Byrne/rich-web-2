@@ -12,15 +12,18 @@
 angular.module('richWeb2App')
 
   .service('channelName', function() {
-    var channelName = "";
+    // Declare channelName
+    var channelName;
 
+    // Return the selected channel
+    // getChannel() returns the name of the selected channel
+    // setChannel() assigns a new value to the channelName
     return {
       getChannel: function(){
         return channelName;
       },
       setChannel: function(value) {
         channelName = value;
-        console.log('service working' + channelName);
       }
     };
   });
