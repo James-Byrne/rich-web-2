@@ -5,11 +5,11 @@
  * @description
  * #ChannelsCtrl
  * Controller of the richWeb2App
- * This controller handles user login
+ *
  */
 angular.module('richWeb2App')
 
-  .controller('ChannelsCtrl', function ($scope, $location) {
+  .controller('ChannelsCtrl', function ($scope, $location, channelName) {
     // Set the background color
     $scope.style = {
       "background-color" : "#F3F3F3",
@@ -17,8 +17,8 @@ angular.module('richWeb2App')
     };
 
     $scope.selectChannel = function(dest) {
-      $location.path(dest);
+      channelName.setChannel(dest);
+      console.log(dest);
+      $location.path("/channel");
     };
-
-
   });

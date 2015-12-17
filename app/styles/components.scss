@@ -15,8 +15,11 @@
   margin-right: auto;
   margin-top: 10%;
 }
-.form-container {
+.top-margin {
   margin-top: 75px;
+}
+.form-container {
+  @extend .top-margin;
   padding: 75px;
   background-color: #F3F3F3;
   border-radius: 25px;
@@ -24,4 +27,7 @@
 }
 .channel-image {
   background-color: #43A047;
+}
+.channel-input {
+  padding: 0;
 }

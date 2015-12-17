@@ -1,0 +1,25 @@
+<md-content ng-controller="ChannelCtrl"  ng-style="style" layout="row" layout-align="center start" ng-cloak>
+
+  <md-card flex="80" class="top-margin">
+    <md-list flex="80">
+      <md-list-item ng-repeat="message in messages">
+        {{message.text}}
+      </md-list-item>
+    </md-list>
+    <md-divider></md-divider>
+    <!-- Input for the chat channel -->
+    <form ng-submit="addMessage()">
+      <div class="channel-input">
+        <md-input-container flex="80" class="md-accent">
+          <label>send a message</label>
+          <input type="text" ng-model="newMessage"/>
+        </md-input-container>
+
+        <md-button ng-click="sendMessage(newMessage)" flex="20" class="md-raised md-accent">Send</md-button>
+      </div>
+    </form>
+
+
+  </md-card>
+
+</md-content>

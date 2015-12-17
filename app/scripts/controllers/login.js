@@ -7,6 +7,7 @@
  * Controller of the richWeb2App
  * This controller handles user login
  */
+
  // global defined for jsHint
  /*global Firebase */
 
