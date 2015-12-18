@@ -7,6 +7,7 @@
  * # richWeb2App
  *
  * Main module of the application.
+ * Handles the routing for the application and dependencies 
  */
 angular
   .module('richWeb2App', [
@@ -37,11 +38,6 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
       })
       .when('/login', {
         templateUrl: 'views/login.html',

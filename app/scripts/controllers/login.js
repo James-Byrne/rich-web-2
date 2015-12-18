@@ -7,7 +7,6 @@
  * Controller of the richWeb2App
  * This controller handles user login
  */
-
  // global defined for jsHint
  /*global Firebase */
 
@@ -20,20 +19,37 @@ angular.module('richWeb2App')
       "height": "100vh",
     };
 
+    // Instatniate the $scope.user object
+    $scope.user = {
+      email: "",
+      password: ""
+    };
+
+    // Open a connection to Firebase
     var ref = new Firebase("https://richweb2.firebaseio.com");
 
+    // Login the user using the list of users from firebase
+    // Uses Firebase.authWithPassword()
     $scope.login = function() {
+      // Check user credentials
       ref.authWithPassword({
         email    : $scope.user.email,
         password : $scope.user.password
-      }, function(error, authData) {
+      }, function(error) {
         if (error) {
-          console.log("Login Failed!", error);
+          // Give user an error if login failed
+          $scope.warning="Error, Username or password incorrect";
+          // Apply changes made to $scope in Asynch task
+          $scope.$apply();
         } else {
+          // set the email for the user using the userAuth service
           userAuth.setEmail($scope.user.email);
-          console.log("Authenticated successfully with payload:", authData);
+          // forward user to the channels page
           $location.path("/channels");
+          // Apply changes made to $scope in Asynch task
+          $scope.$apply();
         }
       });
     };
+
   });

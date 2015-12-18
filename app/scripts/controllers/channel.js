@@ -5,7 +5,9 @@
  * @description
  * #ChannelCtrl
  * Controller of the richWeb2App
- *
+ * Opens a connection to the selected channel
+ * Gets all the current messages available
+ * Allows a user t send messages to the channel
  */
 
  // global defined for jsHint
@@ -22,7 +24,7 @@ angular.module('richWeb2App')
 
     // Get the channel the user selected
     var channel = channelName.getChannel();
-    
+
     // Check if channel is empty, if it is return them to the channels page
     if (!channel) {
       $location.path("/channels");

@@ -5,7 +5,8 @@
  * @description
  * #ChannelsCtrl
  * Controller of the richWeb2App
- *
+ * Channels displays the list of all channels available
+ * Allows a user to select a channel 
  */
 angular.module('richWeb2App')
 

@@ -6,6 +6,7 @@
  * @description
  * # MainCtrl
  * Controller of the richWeb2App
+ * Sets the background for the main screen
  */
 angular.module('richWeb2App')
 
@@ -16,5 +17,4 @@ angular.module('richWeb2App')
       "background-image" : "url(../images/main-photo.jpg)",
       "min-height" : "100%"
     };
-
   });

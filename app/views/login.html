@@ -1,6 +1,7 @@
 <md-content ng-controller="LoginCtrl"  ng-style="style" layout="row" layout-align="center start" ng-cloak>
 
   <div flex="33" flex-sm="80" class="form-container md-raised" layout-align="center center" >
+    <h4 style="color:red">{{warning}}</h4>
     <md-input-container class="md-accent">
       <label>Email</label>
       <input type="email" ng-model="user.email">

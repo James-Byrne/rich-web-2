@@ -6,7 +6,7 @@
  * #userAuth
  * Service of the richWeb2App
  * Service for getting the users email once they are
- * logged in or get default email
+ * logged in or get default "email"
  */
 
 angular.module('richWeb2App')
